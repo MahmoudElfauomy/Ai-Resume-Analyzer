@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محلل السيرة الذاتية</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="upload-section" class="card">
+            <h2 style="margin-top: 0; color: #0f172a;">حلل سيرتك الذاتية بالذكاء الاصطناعي 🪄</h2>
+            <p style="color: #64748b;">قم برفع سيرتك الذاتية بصيغة PDF أو DOCX</p>
+
+            <div class="upload-box">
+                <input type="file" id="resumeFile" accept=".pdf,.docx" style="font-size: 16px;">
+            </div>
+
+            <button type="button" id="submitBtn" class="btn-primary" onclick="analyzeResume()">تحليل السيرة الذاتية
+                الآن</button>
+        </div>
+
+        <div id="results-section" class="results-box">
+            <div class="success-banner">✅ اكتمل التحليل بنجاح!</div>
+
+            <h3 style="color: #0284c7;">📝 الملخص:</h3>
+            <p id="ai-summary" style="line-height: 1.8; color: #334155;"></p>
+
+            <hr style="border-top: 1px solid #e2e8f0; margin: 20px 0;">
+
+            <h3 style="color: #0284c7;">🛠️ المهارات المستخرجة:</h3>
+            <p id="skills-list" style="background: #f8fafc; padding: 15px; border-radius: 8px; font-weight: bold;"></p>
+
+            <hr style="border-top: 1px solid #e2e8f0; margin: 20px 0;">
+
+            <h3 style="color: #0284c7;">🎯 الوظائف المتوافقة:</h3>
+            <div id="jobs-container"></div>
+
+            <button type="button" class="btn-primary" style="margin-top: 30px; background: #475569;"
+                onclick="location.reload()">رفع سيرة ذاتية أخرى</button>
+        </div>
+    </div>
+    <script src="Script.js"></script>
+</body>
+
+</html>
